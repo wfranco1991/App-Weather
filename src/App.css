@@ -1,0 +1,317 @@
+
+
+
+/*----------------------FONDO----------------------*/
+
+body{
+	margin: 0;
+	padding: 0;
+	 /* background-color: #0e6cc4;   */
+ /* 	overflow-x:hidden;
+	overflow-y:hidden;  */
+  min-height: 99.9vh;
+background:  #214F8F;
+color: #fff;
+}
+
+
+/*----------------------HEADER-------------------------------------*/
+.busqueda{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    background-color: #212121;
+    padding: 10px;
+    box-shadow: 0 5px rgba(51, 51, 51, 0.3);
+}
+
+.titulo{
+    font-size: 3em;
+    color: rgb(23, 113, 165);
+    margin-top:  10px;
+    margin-left: 3rem;
+}
+
+.inputCity{
+ margin-top: 18px;
+ margin-left: 15rem;
+  background: none;
+  border: none;
+  outline: none;
+  max-width: 390px;
+  min-width: 290px;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  height: 28px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 9999px;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  color: #fff;
+} 
+
+.inputCity:focus {
+    color:#fff;
+    background-color: #212121;
+    outline-color: rgb(0, 255, 255);
+    box-shadow: -3px -3px 15px rgb(0, 153, 255);
+    transition: .1s;
+    transition-property: box-shadow;
+  }
+
+  #lupa{
+    position: absolute;
+    top: 42px;
+    left: 33.8rem;
+    z-index: 1;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .button {
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    position: relative;
+    background-color: transparent;
+    color: #e8e8e8;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 15px;
+    width: 100px;
+    height: 32px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(51, 51, 51, 0.2);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button::before {
+     content: "Click"; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(135deg,#7b4397,#2427dc );
+    transform: translate(0%,90%);
+    z-index: 99;
+    position: relative;
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button::after {
+    content: "Buscar";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(56, 80, 218);
+    width: 100%;
+    height: 110%;
+    pointer-events: none;
+    transform-origin: top;
+    transform: translate(0%,-100%);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button:hover::before {
+    transform: translate(0%,0%);
+  }
+  
+  .button:hover::after {
+    transform: translate(0%,-200%);
+  }
+  
+  .button:focus {
+    outline: none;
+  }
+  
+  .button:active {
+    scale: 0.95;
+  }
+  
+  /*-------------MAIN-----------------------------*/
+  .city{
+    position: fixed;
+    font-size: 24px;
+    margin-left: 19.5rem;
+    margin-top: 13px;
+  }
+
+  .contenedor{
+    border: none;
+    margin: auto;
+    padding: 6px;
+    max-width: 80rem;
+    height: 550px;
+    overflow: hidden;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    background:;
+    }
+
+    .tiempoActual{
+      width: 43rem;
+      height: 17em;
+       border: none; 
+    }
+
+    #tAcutal{
+      margin-top: -5px;
+      margin-left: 10px;
+    }
+
+    .fechaYa{
+      margin-left: 10px;
+    }
+    #temperatura{
+      position: absolute;
+      font-size: 60px;
+      float:right;
+      color:#fff;
+      margin-left: 12rem;
+      margin-top: -5rem;
+
+    }
+
+    .img{
+      margin-top: -50px;
+      margin-left: 8px;
+      width: 190px;
+    }
+
+    .clima{
+      margin-top: -30px;
+      /* border: solid 1px orange; */
+      display: flex;
+      flex-direction: row;
+      font-size: 12px;
+      text-align: center;
+      line-height: 20px;
+      height: 4rem;
+      padding: 8px;
+    } 
+
+    .cardYa{
+    /* border: solid 1px red; */
+      border-radius: 8px;
+      width: auto;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      margin: 12px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 16px;
+     color:  #0c1821;
+    }
+  
+
+  /*-----------------------------------pRONOSTICO TARJETAS--------------------*/
+.titlePronostico{
+  margin-left: 18px;
+}
+
+/*   .card{
+    border: solid 1px black;
+    border-radius: 8px;
+    width: 10rem;
+    height: 10rem;
+    flex-direction: column;
+  } */
+
+  .tarjetas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto;
+    margin-right: 1em;
+  }
+
+  p{
+    margin-top: -20px;
+  }
+
+  .card {
+    width: 190px;
+    height: 120px;
+    padding: 0.1rem;
+    background: rgba(198, 198, 198, 0.34);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+    border-left: 2px  rgba(255, 255, 255, 0.545) outset;
+    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
+    transform: skewX(10deg);
+    transition: .4s;
+    overflow: hidden;
+    color: #0c1821;
+    font-size:large;
+    text-align:center;
+  }
+  
+  .card:hover {
+    height: 194px;
+    transform: skew(0deg);
+  }
+  
+  .imgCard{
+    position: relative;
+    top: 7%;
+    left: 10%;
+    z-index: 1;
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: cover;
+  }
+
+  .align {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-self: flex-start;
+  }
+  
+  .red {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff605c;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+  }
+  
+  .yellow {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffbd44;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+  }
+  
+  .green {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #00ca4e;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+  }
+
+  /*-------------------------------------------MAPA-------------------------------------------------*/
+
+  .mapcontainer{
+    width: 35rem;
+    height: 250PX;
+    position: fixed;
+    margin-left: 44em;
+  }
+
+
+  
