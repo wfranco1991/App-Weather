@@ -32,7 +32,7 @@ body{
 
 .inputCity{
  margin-top: 18px;
- margin-left: 18.5rem;
+ margin-left: 20rem;
   background: none;
   border: none;
   outline: none;
@@ -61,7 +61,7 @@ body{
   #lupa{
     position: absolute;
     top: 42px;
-    left: 37rem;
+    left: 39rem;
     z-index: 1;
     color: #fff;
     font-size: 20px;
@@ -131,12 +131,16 @@ body{
   .button:active {
     scale: 0.95;
   }
+
+  .icono{
+    margin-left: 5%;
+  }
   
   /*-------------MAIN-----------------------------*/
   .city{
     position: fixed;
     font-size: 24px;
-    margin-left: 19.5rem;
+    margin-left: 20.7rem;
     margin-top: 13px;
     color: #fff;
   }
@@ -160,7 +164,6 @@ body{
     .tiempoActual{
       width: 43rem;
       height: 17em;
-       /* border: solid 1px orange; */
        border-radius: 90em 900em 30em 40em; 
        justify-content: space-between;
        background: rgb(2,0,36);
@@ -173,13 +176,13 @@ body{
       }
 
     #tAcutal{
-      margin-top: -5px;
-      margin-left: 10px;
+      margin-top: -1px;
+      margin-left: 25px;
       color: #fff;
     }
 
     .fechaYa{
-      margin-left: 10px;
+      margin-left: 26px;
       color: #fff;
     }
     #temperatura{
