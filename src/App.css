@@ -6,12 +6,9 @@
 body{
 	margin: 0;
 	padding: 0;
-	 /* background-color: #0e6cc4;   */
- /* 	overflow-x:hidden;
-	overflow-y:hidden;  */
-  min-height: 99.9vh;
-background:  #214F8F;
-color: #fff;
+  min-height: 98.2vh;
+  background-color: rgb(17, 40, 73);
+
 }
 
 
@@ -35,7 +32,7 @@ color: #fff;
 
 .inputCity{
  margin-top: 18px;
- margin-left: 15rem;
+ margin-left: 18.5rem;
   background: none;
   border: none;
   outline: none;
@@ -64,7 +61,7 @@ color: #fff;
   #lupa{
     position: absolute;
     top: 42px;
-    left: 33.8rem;
+    left: 37rem;
     z-index: 1;
     color: #fff;
     font-size: 20px;
@@ -141,6 +138,7 @@ color: #fff;
     font-size: 24px;
     margin-left: 19.5rem;
     margin-top: 13px;
+    color: #fff;
   }
 
   .contenedor{
@@ -151,25 +149,38 @@ color: #fff;
     height: 550px;
     overflow: hidden;
     margin-top: 50px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 30px;
+    box-shadow: -40px 50px 30px rgba(0, 0.1, 0.2, 0.280);
+    border-radius: 17px;
     display: flex;
     flex-direction: column;
-    background:;
+    background-color: rgb(14, 32, 58);
+    
     }
 
     .tiempoActual{
       width: 43rem;
       height: 17em;
-       border: none; 
-    }
+       /* border: solid 1px orange; */
+       border-radius: 90em 900em 30em 40em; 
+       justify-content: space-between;
+       background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%,
+        rgba(61,9,121,1) 35%,
+          rgba(0,212,255,1) 100%);
+          border: none;
+          box-shadow: -40px 50px 30px rgba(
+            0, 0.1, 0.2, 0.280);
+      }
 
     #tAcutal{
       margin-top: -5px;
       margin-left: 10px;
+      color: #fff;
     }
 
     .fechaYa{
       margin-left: 10px;
+      color: #fff;
     }
     #temperatura{
       position: absolute;
@@ -178,7 +189,7 @@ color: #fff;
       color:#fff;
       margin-left: 12rem;
       margin-top: -5rem;
-
+      font-weight: 600;
     }
 
     .img{
@@ -189,7 +200,6 @@ color: #fff;
 
     .clima{
       margin-top: -30px;
-      /* border: solid 1px orange; */
       display: flex;
       flex-direction: row;
       font-size: 12px;
@@ -200,7 +210,6 @@ color: #fff;
     } 
 
     .cardYa{
-    /* border: solid 1px red; */
       border-radius: 8px;
       width: auto;
       height: 50px;
@@ -210,23 +219,17 @@ color: #fff;
       text-align: center;
       font-weight: 600;
       font-size: 16px;
-     color:  #0c1821;
+     /* color:  rgb(53, 25, 207); */
+     color:#e8e8e8
     }
   
 
   /*-----------------------------------pRONOSTICO TARJETAS--------------------*/
 .titlePronostico{
+  font-size: 22px;
   margin-left: 18px;
+  color:  rgb(182, 170, 224);
 }
-
-/*   .card{
-    border: solid 1px black;
-    border-radius: 8px;
-    width: 10rem;
-    height: 10rem;
-    flex-direction: column;
-  } */
-
   .tarjetas{
     display: flex;
     justify-content: space-around;
@@ -235,15 +238,19 @@ color: #fff;
     margin-right: 1em;
   }
 
-  p{
-    margin-top: -20px;
+  .fechaPronostico{
+    margin-top: -2px;
+  }
+
+  .temperaturaPronostico{
+    margin-top: -23px;
   }
 
   .card {
     width: 190px;
     height: 120px;
     padding: 0.1rem;
-    background: rgba(198, 198, 198, 0.34);
+    background-color: rgb(24, 38, 55);
     border-radius: 8px;
     backdrop-filter: blur(5px);
     border-bottom: 3px solid rgba(255, 255, 255, 0.440);
@@ -252,7 +259,7 @@ color: #fff;
     transform: skewX(10deg);
     transition: .4s;
     overflow: hidden;
-    color: #0c1821;
+    color: #fff;
     font-size:large;
     text-align:center;
   }
@@ -264,7 +271,7 @@ color: #fff;
   
   .imgCard{
     position: relative;
-    top: 7%;
+    top: -8%;
     left: 10%;
     z-index: 1;
     max-width: 60%;
@@ -308,9 +315,13 @@ color: #fff;
 
   .mapcontainer{
     width: 35rem;
-    height: 250PX;
-    position: fixed;
+    height: 17rem;
+    position:fixed;
+    bottom: 52%;
     margin-left: 44em;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
   }
 
 

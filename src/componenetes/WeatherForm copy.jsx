@@ -1,35 +1,30 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import useOpenWeather from "../hooks/useOpenWeather";
 import { IoSearchSharp } from "react-icons/io5";
 import Pronostico from "./pronostico";
 import Maps from "./Maps";
-import toast, { Toaster } from 'react-hot-toast';
 
 
 const WeatherForm = () => {
   const [city, setCity] = useState("Medellin");
-  const { weather, apiCity, error } = useOpenWeather();
-  const inputRef = useRef(null);
-  const fechaActual = new Date(/* weather?.dt*1000 */).toLocaleString();
+  const { weather, apiCity } = useOpenWeather();
+
+/*   const ciudadVacia = ()=> {
+    const cityValue = ref.current.value
+    setCity("");
+  } */
 
 
   const buscar = () => {
-    const cityValue = inputRef.current.value
-    
-    /* Validamos que la ciudad no este vacia */
-    if (inputRef.current.value == ''){
-        toast.error('Empty city')
-        return false
-    }
-    setCity(cityValue)
-    apiCity(city)
-    inputRef.current.value = ''
-}
+    apiCity(city);
+    //apiPronostico(city);
+  };
+
   useEffect(() => {
     apiCity(city);
-  }, []);
+  }, [city]);
 
-  
+  const fechaActual = new Date(/* weather?.dt*1000 */).toLocaleString();
 
   return (
     <>
@@ -44,10 +39,7 @@ const WeatherForm = () => {
         />
         <IoSearchSharp id="lupa" />
         <button className="button" onClick={buscar}></button>
-        <Toaster />
-        error
-                    ?
-                    <p className="error">{error}: {city}</p>
+
         <h1 className="titulo">App del Clima</h1>
       </header>
       <h2 className="city">El clima en: {city}</h2>

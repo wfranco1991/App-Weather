@@ -1,6 +1,5 @@
 import useOpenWeather from "../hooks/useOpenWeather";
-/* import React from 'react';
-import moment from 'moment'; */
+
 
 const Tarjeta = (props) => {
     const { weather } = useOpenWeather();
@@ -14,78 +13,76 @@ const Tarjeta = (props) => {
   const fechaFormat1 = new Date (Fecha1).toLocaleString();
 
   
-  const Fecha2 = forecast?.list[17]?.dt_txt;
+  const Fecha2 = forecast?.list[16]?.dt_txt;
   const fechaFormat2 = new Date (Fecha2).toLocaleString();
 
   
-  const Fecha3 = forecast?.list[27]?.dt_txt;
+  const Fecha3 = forecast?.list[24]?.dt_txt;
   const fechaFormat3 = new Date (Fecha3).toLocaleString();
 
   
-  const Fecha4 = forecast?.list[38]?.dt_txt;
+  const Fecha4 = forecast?.list[32]?.dt_txt;
   const fechaFormat4 = new Date (Fecha4).toLocaleString();
-    /* const timestamp = 1701399245;
-    const formattedDate = moment.unix(timestamp).format("HH:mm (DD/MM/YYYY)");
- */
+
 
   return (
     <>
-        <h3 className="titlePronostico">Pronóstico para hoy</h3>
+        <h3 className="titlePronostico">Pronóstico para los proximos 5 días</h3>
       {forecast && (
         <div className="tarjetas">
           <span className="card">
-            <div class="align">
-              <span class="red"></span>
-              <span class="yellow"></span>
-              <span class="green"></span>
+            <div className="align">
+              <span className="red"></span>
+              <span className="yellow"></span>
+              <span className="green"></span>
             </div>
-            Temperatura: {forecast?.list[0]?.main?.temp}°C
+            <p className="fechaPronostico">{fechaFormat}</p>
             <img className="imgCard" src={`https://openweathermap.org/img/wn/${forecast?.list[0]?.weather[0]?.icon}@2x.png`} alt='system icon'/>
-            <p>{fechaFormat}</p>
+            <p className="temperaturaPronostico">Temperatura: {forecast?.list[0]?.main?.temp}°C</p>
           </span>
          
           <span className="card">
-            <div class="align">
-                <span class="red"></span>
-                <span class="yellow"></span>
-                <span class="green"></span>
+            <div className="align">
+                <span className="red"></span>
+                <span className="yellow"></span>
+                <span className="green"></span>
               </div>
-            Temperatura: {forecast?.list[8]?.main?.temp}°C
+            <p className="fechaPronostico">{fechaFormat1}</p>
             <img className="imgCard" src={`https://openweathermap.org/img/wn/${forecast?.list[8]?.weather[0]?.icon}@2x.png`} alt='system icon'/>
-            <p>{fechaFormat1}</p>
+            <p className="temperaturaPronostico">Temperatura: {forecast?.list[8]?.main?.temp}°C</p>
           </span>
           
           <span className="card">
-          <div class="align">
-              <span class="red"></span>
-              <span class="yellow"></span>
-              <span class="green"></span>
+          <div className="align">
+              <span className="red"></span>
+              <span className="yellow"></span>
+              <span className="green"></span>
             </div>
-            Temperatura: {forecast?.list[17]?.main?.temp}°C
+             <p className="fechaPronostico">{fechaFormat2}</p>
             <img className="imgCard" src={`https://openweathermap.org/img/wn/${forecast?.list[17]?.weather[0]?.icon}@2x.png`} alt='system icon'/>
-             <p>{fechaFormat2}</p>
+            <p className="temperaturaPronostico">Temperatura: {forecast?.list[16]?.main?.temp}°C</p>
           </span>
           
           <span className="card">
-          <div class="align">
-              <span class="red"></span>
-              <span class="yellow"></span>
-              <span class="green"></span>
+          <div className="align">
+              <span className="red"></span>
+              <span className="yellow"></span>
+              <span className="green"></span>
             </div>
-            Temperatura: {forecast?.list[27]?.main?.temp}°C
+             <p className="fechaPronostico">{fechaFormat3}</p>
             <img className="imgCard" src={`https://openweathermap.org/img/wn/${forecast?.list[27]?.weather[0]?.icon}@2x.png`} alt='system icon'/>
-             <p>{fechaFormat3}</p>
+            <p className="temperaturaPronostico">Temperatura: {forecast?.list[24]?.main?.temp}°C</p>
           </span>
           
           <span className="card">
-          <div class="align">
-              <span class="red"></span>
-              <span class="yellow"></span>
-              <span class="green"></span>
+          <div className="align">
+              <span className="red"></span>
+              <span className="yellow"></span>
+              <span className="green"></span>
             </div>
-            Temperatura: {forecast?.list[38]?.main?.temp}°C
+             <p className="fechaPronostico">{fechaFormat4}</p>
             <img className="imgCard" src={`https://openweathermap.org/img/wn/${forecast?.list[38]?.weather[0]?.icon}@2x.png`} alt='system icon'/>
-             <p>{fechaFormat4}</p>
+            <p className="temperaturaPronostico">Temperatura: {forecast?.list[32]?.main?.temp}°C</p>
           </span>
         </div>
       )}
