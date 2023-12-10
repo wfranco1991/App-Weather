@@ -3,7 +3,7 @@ import useOpenWeather from "../hooks/useOpenWeather";
 import { IoSearchSharp } from "react-icons/io5";
 import Pronostico from "./pronostico";
 import Maps from "./Maps";
-/* import toast, { Toaster } from 'react-hot-toast'; */
+import swal from "sweetalert";
 
 
 const WeatherForm = () => {
@@ -13,7 +13,15 @@ const WeatherForm = () => {
 
 
   const buscar = () => {
-    apiCity(city)
+   if (city === ""){
+    swal({
+      title: "Campo vacio",
+      text: "Ingresa una Ciudad en la barra de busqueda",
+      icon: "warning"
+    });
+   }else{
+    apiCity(city);
+    }
 }
 
   useEffect(() => {

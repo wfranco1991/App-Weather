@@ -16,7 +16,7 @@ const useOpenWeather = () => {
         setError(null);
         setWeather(datos);
         
-        console.log(datos);
+      /*   console.log(datos); */
       })
       .catch((error) => {
         setWeather(null);
